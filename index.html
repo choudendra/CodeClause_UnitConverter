@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unit Converter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  
+  <div class="converter">
+    <div class="select-container">
+      <label for="conversion-type">Select Conversion Type:</label>
+      <select id="conversion-type">
+        <option value="temperature">Temperature</option>
+        <option value="length">Length</option>
+      </select>
+    </div>
+    </div>
+    <div class="container">
+      <h1>Unit Converter</h1>
+    <div class="temperature" id="temperature-section">
+      
+      <div class="converter">
+        <div class="temperature">
+          <h2>Temperature</h2>
+          <input type="number" id="tempInput" placeholder="Enter value">
+          <select id="tempUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+          </select>
+          <button onclick="convertTemperature()">Convert</button>
+          <p id="tempResult"></p>
+        </div>
+        </div>
+        </div>
+      <!-- Temperature conversion elements -->
+      
+    </div>
+    <div class="container">
+    <div class="length" id="length-section">
+      
+      <div class="converter">
+      <div class="length">
+        <h2>Length</h2>
+        <input type="number" id="lengthInput" placeholder="Enter value">
+        <select id="lengthUnit">
+          <option value="meters">Meters</option>
+          <option value="feet">Feet</option>
+          <option value="inches">Inches</option>
+        </select>
+        <button onclick="convertLength()">Convert</button>
+        <p id="lengthResult"></p>
+      </div>
+      <!-- Length conversion elements -->
+      
+    </div>
+  </div>
+
+  <script>
+    const conversionTypeSelect = document.getElementById('conversion-type');
+    const temperatureSection = document.getElementById('temperature-section');
+    const lengthSection = document.getElementById('length-section');
+
+    conversionTypeSelect.addEventListener('change', function() {
+      const selectedOption = conversionTypeSelect.value;
+      
+      if (selectedOption === 'temperature') {
+        temperatureSection.style.display = 'block';
+        lengthSection.style.display = 'none';
+      } else if (selectedOption === 'length') {
+        temperatureSection.style.display = 'none';
+        lengthSection.style.display = 'block';
+      }
+    });
+
+    // Initially hide one section based on the default selected value
+    if (conversionTypeSelect.value === 'temperature') {
+      lengthSection.style.display = 'none';
+    } else if (conversionTypeSelect.value === 'length') {
+      temperatureSection.style.display = 'none';
+    }
+  </script>
+     
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

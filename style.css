@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+.converter {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.temperature,
+.length {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   /* Change this line to modify the border color */
+  width: calc(50% - 10px); 
+  margin-right: 20px;
+  flex: 2;
+}
+
+
+.temperature:last-child,
+.length:last-child {
+  margin-right: 0; /* Add this line to remove the right margin from the last element */
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+p {
+  margin-top: 0;
+  font-weight: bold;
+}
